@@ -17,7 +17,7 @@ RUN wget https://www.haskell.org/ghc/dist/7.8.4/ghc-7.8.4-x86_64-unknown-linux-d
 
 # Install app-specific requirements.
 RUN apt-get update -y &&\
-    apt-get install -y git libtinfo-dev texlive-xetex darcs npm nodejs-legacy
+    apt-get install -y git libtinfo-dev texlive-xetex darcs npm nodejs-legacy libicu-dev
 
 # Install Bower and Gulp sytem wide.
 RUN npm install -g bower &&\
