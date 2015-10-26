@@ -33,11 +33,11 @@ RUN groupadd -g 9000 ph &&\
 # Run the rest of the statements as user ph.
 USER ph
 
-# Install Cabal install 1.22.3.0
+# Install Cabal install 1.22.6.0
 RUN cd /home/ph &&\
-    wget http://hackage.haskell.org/package/cabal-install-1.22.3.0/cabal-install-1.22.3.0.tar.gz &&\
-    tar xvfz cabal-install-1.22.3.0.tar.gz &&\
-    cd cabal-install-1.22.3.0 && ./bootstrap.sh &&\
+    wget http://hackage.haskell.org/package/cabal-install-1.22.6.0/cabal-install-1.22.6.0.tar.gz &&\
+    tar xvfz cabal-install-1.22.6.0.tar.gz &&\
+    cd cabal-install-1.22.6.0 && ./bootstrap.sh &&\
     cd .. &&\
-    rm -fr cabal-install-1.22.3.0*
+    rm -fr cabal-install-1.22.6.0*
 
