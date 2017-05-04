@@ -19,10 +19,11 @@ RUN groupadd -g 9000 ph &&\
 
 # Run the rest of the statements as user ph.
 USER ph
+ENV PATH /home/ph/.local/bin:$PATH
 
 # Install stack-local ghc.
-ENV PATH /home/ph/.local/bin:$PATH
-RUN stack setup 7.10.3
+COPY ghc.stack.yaml /home/ph/
+RUN stack setup --stack-yaml /home/ph/ghc.stack.yaml
 
 # Install stack-local ghcjs.
 COPY ghcjs.stack.yaml /home/ph/
